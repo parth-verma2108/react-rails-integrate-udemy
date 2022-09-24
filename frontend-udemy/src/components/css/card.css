@@ -2,6 +2,16 @@
   width: 22%;
   margin-left: 46rem;
   position: absolute;
+  z-index: 99999;
+}
+
+.dashcard{
+  width: 22%;
+  margin-left:6rem;
+  z-index: 99999999;
+  position: absolute;
+  margin-top: -23rem;
+  margin-left: 4rem;
 }
 
 .categorycard{
@@ -16,4 +26,10 @@
   margin-top: -17px;
   position: absolute;
   z-index: 999999;
+}
+
+.profilecard{
+  margin-left: 62.8rem;
+  position: absolute;
+  z-index: 99999;
 }
