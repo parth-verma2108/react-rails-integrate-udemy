@@ -15,7 +15,6 @@ class Api::V1::SessionsController < ApplicationController
   end
   def logout!
     reset_session
-    binding.pry
   end
   def set_user
     @user = User.find_by(id: session[:user_id])
