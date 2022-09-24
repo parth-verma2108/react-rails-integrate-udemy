@@ -1,7 +1,9 @@
 import React from 'react';
-import Login from './loginForm'
-import {Routes, Route} from 'react-router-dom'
 import axios from 'axios';
+import DashboardImage from './images/dashboard.jpeg'
+import DashboardCard from './dashboardcard'
+import ShowCourse from './coursecard'
+
 class dashboard extends React.Component {
   state = {
     courses : []
@@ -19,19 +21,12 @@ class dashboard extends React.Component {
     if (courseData.length!=0){
       for(var i=0;i<courseData.length;i++){
         return (
-          <div className="mt-3 mb-5 ms-5 me-5" >
-            <Routes>
-              <Route path="/sign_in" element={<Login />}>
-              </Route>
-            </Routes>
-            <div className="card" style={{width: "18rem"}}>
-              <img src="..." className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title">{courseData[i].name}</h5>
-                <p className="card-text">{courseData[i].description}</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-              </div>
+          <div>
+            <div className="mb-5 ms-5 me-5">
+              <img src={DashboardImage} style={{width: '100%', marginBottom: '4rem'}}/>
+              <DashboardCard />
             </div>
+            <ShowCourse name={courseData[i].name} description={courseData[i].description} price={courseData[i].price}/>
           </div>
         );
       }
