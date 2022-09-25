@@ -6,7 +6,7 @@ import ITNav from './navsubcat/itnav'
 import OfficeNav from './navsubcat/officenav'
 import PDNav from './navsubcat/pdnav'
 import DesignNav from './navsubcat/designnav'
-import MarketingNav from './navsubcat/marketiingnav'
+import MarketingNav from './navsubcat/marketingnav'
 import HealthNav from './navsubcat/healthnav'
 import MusicNav from './navsubcat/musicnav'
 import './css/categorynav.css'
@@ -149,34 +149,34 @@ class categorynav extends Component {
           <span onMouseEnter={this.musicvisibleDisplay} onMouseLeave={this.musichideDisplay} style={{fontSize: '12px', paddingLeft: '2rem'}}>Music</span>
         </div>
       </nav>
-      <div id='subdevelopment' onMouseEnter={this.devvisibleDisplay} onMouseLeave={this.devhideDisplay} style={{display:'none'}}>
+      <div id='subdevelopment' onMouseEnter={this.devvisibleDisplay} onMouseLeave={this.devhideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <DevNav />
       </div>
-      <div id='subbusiness' onMouseEnter={this.busvisibleDisplay} onMouseLeave={this.bushideDisplay} style={{display:'none'}}>
+      <div id='subbusiness' onMouseEnter={this.busvisibleDisplay} onMouseLeave={this.bushideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <BusinessNav />
       </div>
-      <div id='subfin' onMouseEnter={this.finvisibleDisplay} onMouseLeave={this.finhideDisplay} style={{display:'none'}}>
+      <div id='subfin' onMouseEnter={this.finvisibleDisplay} onMouseLeave={this.finhideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <FinanceNav />
       </div>
-      <div id='subit' onMouseEnter={this.itvisibleDisplay} onMouseLeave={this.ithideDisplay} style={{display:'none'}}>
+      <div id='subit' onMouseEnter={this.itvisibleDisplay} onMouseLeave={this.ithideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <ITNav />
       </div>
-      <div id='suboffice' onMouseEnter={this.officevisibleDisplay} onMouseLeave={this.officehideDisplay} style={{display:'none'}}>
+      <div id='suboffice' onMouseEnter={this.officevisibleDisplay} onMouseLeave={this.officehideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <OfficeNav />
       </div>
-      <div id='subpd' onMouseEnter={this.pdvisibleDisplay} onMouseLeave={this.pdhideDisplay} style={{display:'none'}}>
+      <div id='subpd' onMouseEnter={this.pdvisibleDisplay} onMouseLeave={this.pdhideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <PDNav />
       </div>
-      <div id='subdesign' onMouseEnter={this.designvisibleDisplay} onMouseLeave={this.designhideDisplay} style={{display:'none'}}>
+      <div id='subdesign' onMouseEnter={this.designvisibleDisplay} onMouseLeave={this.designhideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <DesignNav />
       </div>
-      <div id='submarket' onMouseEnter={this.marketvisibleDisplay} onMouseLeave={this.markethideDisplay} style={{display:'none'}}>
+      <div id='submarket' onMouseEnter={this.marketvisibleDisplay} onMouseLeave={this.markethideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <MarketingNav />
       </div>
-      <div id='subhealth' onMouseEnter={this.healthvisibleDisplay} onMouseLeave={this.healthhideDisplay} style={{display:'none'}}>
+      <div id='subhealth' onMouseEnter={this.healthvisibleDisplay} onMouseLeave={this.healthhideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <HealthNav />
       </div>
-      <div id='submusic' onMouseEnter={this.musicvisibleDisplay} onMouseLeave={this.musichideDisplay} style={{display:'none'}}>
+      <div id='submusic' onMouseEnter={this.musicvisibleDisplay} onMouseLeave={this.musichideDisplay} style={{display:'none', position: 'absolute', width:'100%'}}>
         <MusicNav />
       </div>
       </div>

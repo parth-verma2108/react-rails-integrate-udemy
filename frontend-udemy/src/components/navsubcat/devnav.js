@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class subcatnav extends Component {
   render() {
     return (
-      <nav class="navbar bg-dark" style={{height: '2.5rem'}}>
+      <nav className="navbar bg-dark" style={{height: '2.5rem'}}>
         <div className='align-center'>
           <span style={{fontSize: '12px', paddingLeft: '2rem', color: 'white'}}>Web Development</span>
           <span style={{fontSize: '12px', paddingLeft: '2rem', color: 'white'}}>Mobile Development</span>
