@@ -153,7 +153,7 @@ class navbar extends React.Component {
     if(!isLoggedIn){
       return (
           <div>
-          <nav className="navbar navbar-expand-lg bg-light nav-fixed max-index" style={{ paddingTop: '15px', paddingBottom: '15px'}}>
+          <nav className="navbar navbar-expand-lg bg-light nav-fixed max-index" style={{ paddingTop: '15px', paddingBottom: '15px', boxShadow: '1px -5px 20px #8f8f8f'}}>
             <div className="container-fluid">
               <img src={UdemyLogo} style={{width: '80px'}}/>
               <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -164,7 +164,7 @@ class navbar extends React.Component {
                   </form>
                   <a className="nav-link pe-2" onMouseEnter={this.ubvisibleDisplay} onMouseLeave={this.ubhideDisplay} style={{fontSize:'11px', color:'black'}}>Udemy Business</a>
                   <a className="nav-link pe-2" onMouseEnter={this.tuvisibleDisplay} onMouseLeave={this.tuhideDisplay} style={{fontSize:'11px', color:'black'}}>Teach on Udemy</a>
-                  <img src={Cart} className='pe-3 ps-3'/>
+                  <img src={Cart} className='pe-3 ps-3' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay}/>
                   <Link to="/login" className="btn btn-light"  style={{borderRadius:'0', border: '1px solid black', marginRight:'5px'}}>Login</Link>
                   <Link to="/sign_up" className="btn btn-dark"  style={{borderRadius:'0', border: '1px solid black', marginRight:'5px'}}>Signup</Link>
                   <img src={Globe} className='btn btn-light' style={{borderRadius:'0', border: '1px solid black'}}/>
@@ -181,6 +181,9 @@ class navbar extends React.Component {
           <div id='teachonudemy' onMouseEnter={this.tuvisibleDisplay} onMouseLeave={this.tuhideDisplay} style={{display:'none', paddingLeft:'2rem'}}>
             <Teachonudemy />
           </div>
+          <div id='cart' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay} style={{display:'none', marginLeft: '8rem'}}>
+          <CartCard />
+        </div>
         </div>
       );
     }
