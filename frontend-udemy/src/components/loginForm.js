@@ -61,13 +61,19 @@ class loginForm extends React.Component {
         <Navbar />
         <div className="title">
           <h2 className="title-content" style={{width: "20rem"}}>Log in to your Udemy account</h2>
-          <hr style={{width: "20rem"}}/>
+          <hr style={{width: "20rem", margin:'0'}}/>
         </div>
         <div>
           <form className="form-body" onSubmit={this.handleSubmit} style={{textAlign: "center"}}>
             <input className="input-field" id="email" placeholder="email" type="email" value={email} onChange={(e)=>{this.setState({email: e.target.value})}}/><br />
             <input className="input-field" placeholder="password" type="password" value={password} onChange={(e)=>{this.setState({password: e.target.value})}}/><br />
             <button className="input-field btn" type='submit' style={{borderRadius: '0', backgroundColor:'#a435f0', color:'white',     fontFamily: 'inherit'}}>Login</button><br />
+            <div>
+              <div className='pt-3' style={{fontFamily:'Arial'}}>or <span style={{color:'#5624d0'}}>Forgot password</span></div>
+              <div className='pt-3' style={{fontFamily:'Arial', color:'#5624d0'}}>Log in to a different account</div>
+              <div className='pt-4' style={{fontFamily:'Arial'}}>Don't have an account? <span style={{color:'#401b9c', fontWeight: '700', textDecoration: 'underline'}}>Sign up</span></div>
+              <div className='pt-2 ' style={{fontFamily:'Arial', color:'#401b9c', fontWeight: '700'}}>Log in with your organization</div>     
+            </div>
           </form>
         </div>
       </div>
