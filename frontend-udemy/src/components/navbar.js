@@ -23,9 +23,11 @@ class navbar extends React.Component {
     isLoggedOut: true,
     user: {}
   }
+
   componentDidMount() {
     this.loginStatus()
   }
+
   loginStatus = () => {
     axios.get('http://localhost:3001/api/v1/logged_in',
     {withCredentials: true})
@@ -39,6 +41,7 @@ class navbar extends React.Component {
     })
     .catch(error => console.log('api errors:', error))
   }
+
   handleLogin = (data) => {
     console.log('Dandlie', data.user)
     this.setState({
@@ -47,6 +50,7 @@ class navbar extends React.Component {
       user: data.user
     })
   }
+
   handleLogout = () => {
     axios.post('http://localhost:3001/api/v1/logout',
     {withCredentials: true})
@@ -60,8 +64,8 @@ class navbar extends React.Component {
       }
     })
     .catch(error => console.log('api errors:', error))
-    
   }
+
   ubvisibleDisplay = () => {
     var visible = document.getElementById('udemybussiness')
     console.log(visible)
