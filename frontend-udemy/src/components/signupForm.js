@@ -39,7 +39,7 @@ class signupForm extends Component {
       if (response.data.status === 'created') {
         console.log(response.data)
         this.handleLogin(response.data)
-        this.redirect()
+        window.location.href="/"
       } else {
         this.setState({
           errors: response.data.errors
@@ -48,10 +48,6 @@ class signupForm extends Component {
       }
     })
     .catch(error => console.log('api errors:', error))
-    }
-
-    redirect = () => {
-      this.props.history.push('/');
     }
 
     handleErrors = () => {
