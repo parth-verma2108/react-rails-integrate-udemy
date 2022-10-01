@@ -109,20 +109,20 @@ class categorycard extends Component {
         <div className="card" style={{width: "18rem", borderRadius: '0', height: '32rem'}}>
           <div className="card-body">
             <div style={{display: 'flex', flexDirection: 'column-reverse'}}>
-              <ul style={{paddingLeft: "10px"}}>
-                <li className="pb-2" onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Development</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.bussinessvisibleDisplay} onMouseLeave={this.bussinesshideDisplay}><span>Business</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.financevisibleDisplay} onMouseLeave={this.financehideDisplay}><span>Finance {'&'} Accounting</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.itvisibleDisplay} onMouseLeave={this.ithideDisplay}><span>IT {'&'} Software</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.officevisibleDisplay} onMouseLeave={this.officehideDisplay}><span>Office Productivity</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Personal Development</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Design</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Marketing</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Lifestyle</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Photography {'&'} Video</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Health {'&'} Fitness</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li className="pb-2" onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Music</span><span style={{float: 'right'}}>{'>'}</span></li>
-                <li><span>Teaching {'&'} Academics</span><span style={{float: 'right'}}>{'>'}</span></li>
+              <ul style={{paddingLeft: "10px", paddingTop:'1rem'}}>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Development</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.bussinessvisibleDisplay} onMouseLeave={this.bussinesshideDisplay}><span>Business</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.financevisibleDisplay} onMouseLeave={this.financehideDisplay}><span>Finance {'&'} Accounting</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.itvisibleDisplay} onMouseLeave={this.ithideDisplay}><span>IT {'&'} Software</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.officevisibleDisplay} onMouseLeave={this.officehideDisplay}><span>Office Productivity</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Personal Development</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Design</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Marketing</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Lifestyle</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Photography {'&'} Video</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Health {'&'} Fitness</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li className="pb-3" style={{fontSize:'12px'}} onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay}><span>Music</span><span style={{float: 'right'}}>{'>'}</span></li>
+                <li style={{fontSize:'12px'}}><span>Teaching {'&'} Academics</span><span style={{float: 'right'}}>{'>'}</span></li>
               </ul>
               <div id='development' onMouseEnter={this.developmentvisibleDisplay} onMouseLeave={this.developmenthideDisplay} style={{display:'none', paddingLeft:'2rem', marginLeft: '14.5rem'}}>
                 <Development />

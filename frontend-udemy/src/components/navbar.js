@@ -157,21 +157,41 @@ class navbar extends React.Component {
     if(!isLoggedIn){
       return (
           <div>
-          <nav className="navbar navbar-expand-lg bg-light nav-fixed max-index" style={{ paddingTop: '15px', paddingBottom: '15px', boxShadow: '1px -5px 20px #8f8f8f'}}>
-            <div className="container-fluid">
-              <img src={UdemyLogo} style={{width: '80px'}}/>
-              <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
-                  <a className="nav-link pe-2" onMouseEnter={this.catvisibleDisplay} onMouseLeave={this.cathideDisplay} style={{fontSize:'11px', color:'black'}}>Categories</a>
-                  <form className="d-flex pe-2" role="search">
+          <nav className="navbar navbar-expand-lg bg-light nav-fixed max-index" style={{ padding:'0', boxShadow: '1px -5px 20px #8f8f8f'}}>
+            <div className="d-flex" style={{justifyContent: 'center', width:'100%'}}>
+              <div className='pt-3 pb-3'>
+                <Link to="/">
+                  <img src={UdemyLogo} style={{width: '80px'}}/>
+                </Link>
+              </div>
+              <div className="navbar-nav">
+                <div className='pt-3 pb-3 ps-2 pe-2' onMouseEnter={this.catvisibleDisplay} onMouseLeave={this.cathideDisplay}>
+                  <a className="nav-link" style={{fontSize:'12px', color:'black'}}>Categories</a>
+                </div>
+                <div className='pt-3 pb-3 ps-2 pe-2'>
+                  <form className="d-flex" role="search">
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{width: '40rem', borderRadius: '20px', border: "1px solid black"}}/>
                   </form>
-                  <a className="nav-link pe-2" onMouseEnter={this.ubvisibleDisplay} onMouseLeave={this.ubhideDisplay} style={{fontSize:'11px', color:'black'}}>Udemy Business</a>
-                  <a className="nav-link pe-2" onMouseEnter={this.tuvisibleDisplay} onMouseLeave={this.tuhideDisplay} style={{fontSize:'11px', color:'black'}}>Teach on Udemy</a>
-                  <img src={Cart} className='pe-3 ps-3' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay}/>
-                  <Link to="/login" className="btn btn-light"  style={{borderRadius:'0', border: '1px solid black', marginRight:'5px'}}>Login</Link>
-                  <Link to="/sign_up" className="btn btn-dark"  style={{borderRadius:'0', border: '1px solid black', marginRight:'5px'}}>Signup</Link>
-                  <img src={Globe} className='btn btn-light' style={{borderRadius:'0', border: '1px solid black'}}/>
+                </div>
+                <div className='pt-3 pb-3 ps-2 pe-2' onMouseEnter={this.ubvisibleDisplay} onMouseLeave={this.ubhideDisplay}>
+                  <a className="nav-link"  style={{fontSize:'12px', color:'black'}}>Udemy Business</a>
+                </div>
+                <div className='pt-3 pb-3 ps-2 pe-2' onMouseEnter={this.tuvisibleDisplay} onMouseLeave={this.tuhideDisplay} >
+                  <a className="nav-link" style={{fontSize:'12px', color:'black'}}>Teach on Udemy</a>
+                </div>
+                <div className='pt-3 pb-3 ps-2 pe-2' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay}>
+                  <img src={Cart}/>
+                </div>
+                <div className='pt-3 pb-3 ps-2 pe-2 d-flex'>
+                  <div>
+                    <Link to="/login" className="btn btn-light"  style={{borderRadius:'0', border: '1px solid black', marginRight:'5px'}}>Login</Link>
+                  </div>
+                  <div>
+                    <Link to="/sign_up" className="btn btn-dark"  style={{borderRadius:'0', border: '1px solid black', marginRight:'5px'}}>Signup</Link>
+                  </div>
+                  <div>
+                    <img src={Globe} className='btn btn-light' style={{borderRadius:'0', border: '1px solid black', padding: '10px'}}/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -185,7 +205,7 @@ class navbar extends React.Component {
           <div id='teachonudemy' onMouseEnter={this.tuvisibleDisplay} onMouseLeave={this.tuhideDisplay} style={{display:'none', paddingLeft:'2rem'}}>
             <Teachonudemy />
           </div>
-          <div id='cart' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay} style={{display:'none', marginLeft: '8rem'}}>
+          <div id='cart' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay} style={{display:'none', marginLeft: '9.5rem'}}>
           <CartCard />
         </div>
         </div>
@@ -194,22 +214,40 @@ class navbar extends React.Component {
     else{
       return (
         <div>
-        <nav className="navbar navbar-expand-lg bg-light nav-fixed max-index" style={{ paddingTop: '15px', paddingBottom: '15px', boxShadow: 'inset -5px -1px 0px 0px #d8d8d8'}}>
-          <div className="container-fluid">
-            <img src={UdemyLogo} style={{width: '100px'}}/>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div className="navbar-nav">
-                <a className="nav-link pe-3" onMouseEnter={this.catvisibleDisplay} onMouseLeave={this.cathideDisplay} style={{fontSize:'11px', color:'black'}}>Categories</a>
-                <form className="d-flex pe-3" role="search">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{width: '40rem', borderRadius: '20px', border: "1px solid black"}}/>
-              </form>
-              <a className="nav-link pe-3" onMouseEnter={this.ubvisibleDisplay} onMouseLeave={this.ubhideDisplay} style={{fontSize:'11px', color:'black'}}>Udemy Business</a>
-              <a className="nav-link pe-3" style={{fontSize:'11px', color:'black'}}>Instructor</a>
-              <a className="nav-link pe-3" onMouseEnter={this.mlvisibleDisplay} onMouseLeave={this.mlhideDisplay} style={{fontSize:'11px', color:'black'}}>My Learning</a>
-              <img src={Heart} className="pe-3" onMouseEnter={this.wlvisibleDisplay} onMouseLeave={this.wlhideDisplay}/>
-              <img src={Cart} className="pe-3" onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay}/>
-              <img src={Bell} className="pe-3" />
-              <button className="btn btn-dark" onMouseEnter={this.profilevisibleDisplay} onMouseLeave={this.profilehideDisplay}  style={{borderRadius:'25px', marginRight:'5px'}} onClick={this.handleLogout}>{user.first_name.charAt(0)}</button>
+        <nav className="navbar navbar-expand-lg bg-light nav-fixed max-index" style={{padding:'0', boxShadow: 'inset -5px -1px 0px 0px #d8d8d8'}}>
+          <div className="d-flex" style={{justifyContent: 'center', width:'100%'}}>
+            <div className='pt-3 pb-3'>
+              <img src={UdemyLogo} style={{width: '80px'}}/>
+            </div>
+            <div className="navbar-nav">
+              <div className='pt-3 pb-3 ps-2 pe-2' onMouseEnter={this.catvisibleDisplay} onMouseLeave={this.cathideDisplay}>
+                <a className="nav-link" style={{fontSize:'12px', color:'black'}}>Categories</a>
+              </div>
+              <div className='pt-3 pb-3 ps-2 pe-2'>
+                <form className="d-flex" role="search">
+                  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{width: '40rem', borderRadius: '20px', border: "1px solid black"}}/>
+                </form>
+              </div>
+              <div className='pt-3 pb-3 ps-2 pe-2' onMouseEnter={this.ubvisibleDisplay} onMouseLeave={this.ubhideDisplay}>
+                <a className="nav-link"  style={{fontSize:'12px', color:'black'}}>Udemy Business</a>
+              </div>
+              <div className='pt-3 pb-3 ps-2 pe-2'>
+                <a className="nav-link" style={{fontSize:'12px', color:'black'}}>Instructor</a>
+              </div>
+              <div className='pt-3 pb-3 ps-2 pe-2' onMouseEnter={this.mlvisibleDisplay} onMouseLeave={this.mlhideDisplay}>
+                <a className="nav-link"  style={{fontSize:'12px', color:'black'}}>My Learning</a>
+              </div>
+              <div className='pt-3 pb-3 ps-2 pe-2'onMouseEnter={this.wlvisibleDisplay} onMouseLeave={this.wlhideDisplay}>
+                <img src={Heart}/>
+              </div>
+              <div className='pt-3 pb-3 ps-2 pe-2' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay}>
+                <img src={Cart}/>
+              </div>
+              <div className='pt-3 pb-3 ps-2 pe-2'onMouseEnter={this.wlvisibleDisplay} onMouseLeave={this.wlhideDisplay}>
+                <img src={Bell}/>
+              </div>
+              <div className='pt-3 pb-3 ps-2 pe-2'onMouseEnter={this.profilevisibleDisplay} onMouseLeave={this.profilehideDisplay}>
+                <button className="btn btn-dark" style={{borderRadius:'25px', marginRight:'5px'}} onClick={this.handleLogout}>{user.first_name.charAt(0)}</button>
               </div>
             </div>
           </div>
@@ -220,16 +258,16 @@ class navbar extends React.Component {
         <div id='udemybussiness' onMouseEnter={this.ubvisibleDisplay} onMouseLeave={this.ubhideDisplay} style={{display:'none'}}>
           <Bussiness />
         </div>
-        <div id='mylearning' onMouseEnter={this.mlvisibleDisplay} onMouseLeave={this.mlhideDisplay} style={{display:'none', marginLeft: '2rem'}}>
+        <div id='mylearning' onMouseEnter={this.mlvisibleDisplay} onMouseLeave={this.mlhideDisplay} style={{display:'none', marginLeft: '7rem'}}>
           <MyLearning />
         </div>
-        <div id='wishlist' onMouseEnter={this.wlvisibleDisplay} onMouseLeave={this.wlhideDisplay} style={{display:'none', marginLeft: '8rem'}}>
+        <div id='wishlist' onMouseEnter={this.wlvisibleDisplay} onMouseLeave={this.wlhideDisplay} style={{display:'none', marginLeft: '15rem'}}>
           <Wishlist />
         </div>
-        <div id='cart' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay} style={{display:'none', marginLeft: '8rem'}}>
+        <div id='cart' onMouseEnter={this.cartvisibleDisplay} onMouseLeave={this.carthideDisplay} style={{display:'none', marginLeft: '17rem'}}>
           <CartCard />
         </div>
-        <div id='profile' onMouseEnter={this.profilevisibleDisplay} onMouseLeave={this.profilehideDisplay} style={{display:'none'}}>
+        <div id='profile' onMouseEnter={this.profilevisibleDisplay} onMouseLeave={this.profilehideDisplay} style={{display:'none', marginLeft: '7.5rem'}}>
           <ProfileMenu />
         </div>
         <CategoryNav />
