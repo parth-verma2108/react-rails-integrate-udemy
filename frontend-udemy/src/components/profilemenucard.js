@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from  'react-router-dom';
+
 
 class profilemenucard extends Component {
   render() {
@@ -18,7 +20,8 @@ class profilemenucard extends Component {
                 <li className="pb-2 pt-3" style={{borderBottom: "1px solid #dfdfdf", fontSize: '12px'}}><span>Instructor Board</span></li>
                 <li className="pb-2 pt-3" style={{fontSize: "12px"}}><span>Notification</span></li>
                 <li className="pb-2 pt-3" style={{borderBottom: "1px solid #dfdfdf", fontSize:'12px'}}><span>Messages</span></li>
-                <li className="pb-2 pt-3" style={{fontSize: "12px"}}><span>Account Settings</span></li>
+                <li className="pb-2 pt-3" style={{fontSize: "12px"}}><span><Link to="/account_setting">
+                Account Settings</Link></span></li>
                 <li className="pb-2 pt-3" style={{borderBottom: "1px solid #dfdfdf", fontSize: '12px'}}><span>Payment Methods</span></li>
                 <li className="pb-2 pt-3" style={{fontSize: "12px"}}><span>Udemy Credits</span></li>
                 <li className="pb-2 pt-3" style={{borderBottom: "1px solid #dfdfdf", fontSize: '12px'}}><span>Purchase Histroy</span></li>
