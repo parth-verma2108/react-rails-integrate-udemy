@@ -1,0 +1,14 @@
+.acc-content{
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 30px 30px 10px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 1rem;
+  width: auto;
+  text-align: left;
+}
+.bb-dark{
+  border-bottom: 2px solid black;
+}
