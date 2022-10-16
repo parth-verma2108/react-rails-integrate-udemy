@@ -9,12 +9,12 @@ import Question from './images/question.svg'
 import { AnimatePresence, motion } from "framer-motion";
 import './css/sidebar.css'
 
-const routes = [
-];
 
-const SideBar = ({ children }) => {
+const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  const openSidebar = () => setIsOpen(true);
+  const closeSidebar = () => setIsOpen(false);
+
   const showAnimation = {
     hidden: {
       width: 0,
@@ -34,7 +34,7 @@ const SideBar = ({ children }) => {
 
   return (
     <>
-      <div className="main-container" style={{zIndex:'999999999'}} onMouseOver={toggle}>
+      <div className="main-container" style={{zIndex:'999999999'}} onMouseOver={openSidebar} onMouseLeave={closeSidebar}>
         <motion.div
           animate={{
             width: isOpen ? "200px" : "45px",
@@ -158,8 +158,6 @@ const SideBar = ({ children }) => {
             </NavLink>
           </section>
         </motion.div>
-
-        <main>{children}</main>
       </div>
     </>
   );

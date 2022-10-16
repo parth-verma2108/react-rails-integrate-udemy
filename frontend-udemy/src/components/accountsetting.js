@@ -7,6 +7,7 @@ import NotificationSetting from './notificationsetting';
 import MessageSetting from './messagesetting'
 import APIClient from './apiclient'
 import CloseAccount from './closeaccount'
+import Nav from './instructornav'
 
 class accountsetting extends React.Component {
   state = {
@@ -42,7 +43,8 @@ class accountsetting extends React.Component {
       <div>
         <div className='d-flex'>
           <SideBar />
-          <div style={{ position: 'absolute', marginLeft:'7rem', width: '100%'}}>
+          <Nav/>
+          <div style={{position: 'absolute', paddingLeft:'7rem', width: '100%'}}>
             <div className="title" style={{placeItems: 'flex-start'}}>
               <h2 style={{marginTop:'3rem'}}>Account</h2>
               <div className='d-flex'>
